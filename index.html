@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PASION FUTBOLERA</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="encabezado">
+
+    <div class="encabezado_logo">
+        PASION FUTBOLERA ⚽
+    </div>
+
+    <nav class="nav_principal">
+        <ul class="nav_principal_lista">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#ligas">Ligas</a></li>
+            <li><a href="#noticias">Noticias</a></li>
+            <li><a href="#resultados">Resultados</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="biografia.html">Biografía</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<main>
+
+<!-- CARRUSEL -->
+<section id="inicio" class="carrusel">
+
+    <div class="carrusel_contenedor">
+
+        <div class="carrusel_slide activo">
+
+            <img src="/resource/estadio.jpg" alt="Estadio">
+
+            <div class="carrusel_texto">
+                <h1>FUTBOL MUNDIAL</h1>
+                <p>
+                    Mantente informado sobre ligas, fichajes,
+                    resultados y competiciones internacionales.
+                </p>
+
+                <a href="#noticias" class="carrusel_boton">
+                    Ver Noticias
+                </a>
+            </div>
+
+        </div>
+
+        <div class="carrusel_slide">
+
+            <img src="/resource/jugador.jpeg" alt="Jugador">
+
+            <div class="carrusel_texto">
+                <h1>CHAMPIONS LEAGUE</h1>
+                <p>
+                    Sigue los mejores partidos y estadísticas.
+                </p>
+
+                <a href="#resultados" class="carrusel_boton">
+                    Ver Resultados
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <button class="carrusel__boton carrusel__boton--anterior">
+        ❮
+    </button>
+
+    <button class="carrusel__boton carrusel__boton--siguiente">
+        ❯
+    </button>
+
+</section>
+
+
+
+   
+<!-- LIGAS -->
+<section id="ligas" class="catalogo">
+
+    <h2 class="catalogo__titulo">
+        Principales Ligas
+    </h2>
+
+    <div class="catalogo__grid">
+
+        <article class="producto">
+            <img src="/resource/laliga.webp" alt="">
+            <h3 class="producto__nombre">LaLiga</h3>
+            <a href="laliga.html" class="producto__boton">
+                VER MÁS
+            </a>
+        </article>
+
+        <article class="producto">
+            <img src="/resource/la premier.webp" alt="">
+            <h3 class="producto__nombre">Premier League</h3>
+            <a href="lapremier.html" class="producto__boton">
+                VER MÁS
+            </a>
+        </article>
+
+        <article class="producto">
+            <img src="/resource/serie A.webp" alt="">
+            <h3 class="producto__nombre">Serie A</h3>
+            <a href="seriea.html" class="producto__boton">
+                VER MÁS
+            </a>
+        </article>
+
+        <article class="producto">
+            <img src="/resource/bundesliga.jpg" alt="">
+            <h3 class="producto__nombre">Bundesliga</h3>
+            <a href="Bundesliga.html" class="producto__boton">
+                VER MÁS
+            </a>
+        </article>
+
+        <article class="producto">
+            <img src="/resource/ligue1.jpg" alt="">
+            <h3 class="producto__nombre">Ligue 1</h3>
+            <a href="ligue 1.html" class="producto__boton">
+                VER MÁS
+            </a>
+        </article>
+
+    </div>
+
+</section>
+
+<!-- NOTICIAS -->
+<section id="noticias" class="catalogo">
+
+    <h2 class="catalogo__titulo">Noticias Destacadas</h2>
+
+    <div class="catalogo__grid">
+
+        <article class="producto">
+            <img src="/resource/goleada historica.webp" alt="">
+            <h3 class="producto__nombre">
+                🔥 Goleada histórica en Champions
+            </h3>
+            <button class="producto__boton">VER MÁS</button>
+        </article>
+
+        <article class="producto">
+            <img src="/resource/fichaje bomba.webp" alt="">
+            <h3 class="producto__nombre">
+                ⚽ Fichaje bomba en Europa
+            </h3>
+            <button class="producto__boton">VER MÁS</button>
+        </article>
+
+        <article class="producto">
+            <img src="/resource/lider en liga.webp" alt="">
+            <h3 class="producto__nombre">
+                🏆 Nuevo líder en LaLiga
+            </h3>
+            <button class="producto__boton">VER MÁS</button>
+        </article>
+
+    </div>
+
+</section>
+
+<!-- RESULTADOS -->
+<section id="resultados" class="resultados">
+
+    <h2 class="catalogo__titulo">
+        Resultados Recientes
+    </h2>
+
+    <div class="resultados__contenedor">
+
+        <div class="partido">
+            <span>Real Madrid</span>
+            <strong>3 - 1</strong>
+            <span>Barcelona</span>
+        </div>
+
+        <div class="partido">
+            <span>Manchester City</span>
+            <strong>2 - 0</strong>
+            <span>Arsenal</span>
+        </div>
+
+        <div class="partido">
+            <span>Juventus</span>
+            <strong>1 - 1</strong>
+            <span>Inter</span>
+        </div>
+
+        <div class="partido">
+            <span>Bayern Munich</span>
+            <strong>4 - 2</strong>
+            <span>Dortmund</span>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PROXIMOS PARTIDOS -->
+<section class="proximos">
+
+    <h2 class="catalogo__titulo">
+        Próximos Partidos
+    </h2>
+
+    <div class="proximos__grid">
+
+        <div class="encuentro">
+            <h3>Real Madrid vs PSG</h3>
+            <p>20 Agosto - 8:00 PM</p>
+        </div>
+
+        <div class="encuentro">
+            <h3>Liverpool vs Chelsea</h3>
+            <p>21 Agosto - 3:00 PM</p>
+        </div>
+
+        <div class="encuentro">
+            <h3>Bayern vs Dortmund</h3>
+            <p>22 Agosto - 1:00 PM</p>
+        </div>
+
+        <div class="encuentro">
+            <h3>Milan vs Juventus</h3>
+            <p>23 Agosto - 6:00 PM</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- JUGADORES -->
+<section class="jugadores">
+
+    <h2 class="catalogo__titulo">
+        Jugadores Destacados
+    </h2>
+
+    <div class="catalogo__grid">
+
+        <article class="producto">
+            <img src="/resource/mbappe destacado.jpg" alt="">
+            <h3 class="producto__nombre">
+                Kylian Mbappé
+            </h3>
+        </article>
+
+        <article class="producto">
+            <img src="/resource/erling destacado.jpg" alt="">
+            <h3 class="producto__nombre">
+                Erling Haaland
+            </h3>
+        </article>
+
+        <article class="producto">
+            <img src="resource/belin destacado.webp" alt="">
+            <h3 class="producto__nombre">
+                Jude Bellingham
+            </h3>
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACTO -->
+<section id="contacto" class="contacto">
+
+    <div class="formulario-contacto">
+
+        <h2 class="formulario-contacto__titulo">
+            Contáctanos
+        </h2>
+
+        <form
+            id="formularioContacto"
+            class="formulario-contacto__formulario"
+            >
+
+            <input
+                type="text"
+                name="nombre"
+                placeholder="Nombre completo"
+                required>
+
+            <input
+                type="email"
+                name="correo"
+                placeholder="Correo electrónico"
+                required>
+
+            <input
+                type="text"
+                name="asunto"
+                placeholder="Asunto"
+                required>
+
+            <textarea
+                name="mensaje"
+                rows="6"
+                placeholder="Mensaje"
+                required></textarea>
+
+            <button type="submit">
+                Enviar Mensaje
+            </button>
+
+            <div id="mensajeFormulario"></div>
+
+        </form>
+
+    </div>
+
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+    <div class="footer__contenido">
+
+        <h3>PASION FUTBOLERA ⚽</h3>
+
+        <p>
+            Tu portal deportivo con noticias,
+            resultados y estadísticas.
+        </p>
+
+        <p>
+            © 2026 Todos los derechos reservados.
+        </p>
+
+    </div>
+
+</footer>
+<script src="scrip.js"></script>
+</body>
+</html>

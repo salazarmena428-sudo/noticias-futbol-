@@ -1,0 +1,787 @@
+
+/* ====================================
+PASION FUTBOLERA
+==================================== */
+
+/* =========================
+   VARIABLES
+========================= */
+
+:root{
+
+    --color-marca:#16a34a;
+    --color-marca-dark:#15803d;
+
+    --fondo-principal:#0f172a;
+    --fondo-secundario:#1e293b;
+
+    --texto:#ffffff;
+    --texto-secundario:#cbd5e1;
+
+    --fuente:'Inter',sans-serif;
+
+    --sombra:0 10px 25px rgba(0,0,0,.25);
+
+    --transicion:.3s ease;
+}
+
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:var(--fuente);
+    background:var(--fondo-principal);
+    color:var(--texto);
+    overflow-x:hidden;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.encabezado{
+
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:1rem 5%;
+
+    background:rgba(15,23,42,.95);
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+.encabezado_logo{
+
+    color:white;
+
+    font-size:1.5rem;
+    font-weight:900;
+
+    border-left:4px solid var(--color-marca);
+
+    padding-left:12px;
+}
+
+.nav_principal_lista{
+
+    list-style:none;
+
+    display:flex;
+    gap:2rem;
+}
+
+.nav_principal_lista a{
+
+    text-decoration:none;
+
+    color:white;
+
+    font-weight:700;
+
+    transition:var(--transicion);
+}
+
+.nav_principal_lista a:hover{
+
+    color:var(--color-marca);
+}
+
+/* =========================
+   CARRUSEL
+========================= */
+
+.carrusel{
+    position:relative;
+    width:100%;
+    height:80vh;
+    overflow:hidden;
+}
+
+.carrusel_contenedor{
+    position:relative;
+    width:100%;
+    height:100%;
+}
+
+.carrusel_slide{
+    position:absolute;
+    width:100%;
+    height:100%;
+    opacity:0;
+    transition:opacity .8s ease;
+}
+
+.carrusel_slide.activo{
+    opacity:1;
+}
+
+.carrusel_slide img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    filter:brightness(.45);
+}
+
+.carrusel_texto{
+
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    text-align:center;
+
+    width:90%;
+    max-width:900px;
+
+    z-index:5;
+}
+
+.carrusel_texto h1{
+
+    font-size:4rem;
+    font-weight:900;
+
+    margin-bottom:1rem;
+
+    color:white;
+}
+
+.carrusel_texto p{
+
+    font-size:1.2rem;
+    line-height:1.8;
+
+    color:#e2e8f0;
+
+    margin-bottom:2rem;
+}
+
+.carrusel_boton{
+
+    display:inline-block;
+
+    padding:1rem 2rem;
+
+    background:var(--color-marca);
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:50px;
+
+    font-weight:700;
+
+    transition:var(--transicion);
+}
+
+.carrusel_boton:hover{
+
+    background:var(--color-marca-dark);
+
+    transform:translateY(-3px);
+}
+
+.carrusel__boton{
+
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:60px;
+    height:60px;
+
+    border:none;
+    border-radius:50%;
+
+    background:var(--color-marca);
+
+    color:white;
+
+    font-size:1.5rem;
+    font-weight:bold;
+
+    cursor:pointer;
+
+    z-index:20;
+
+    transition:var(--transicion);
+}
+
+.carrusel__boton:hover{
+
+    background:white;
+    color:var(--color-marca);
+}
+
+.carrusel__boton--anterior{
+    left:25px;
+}
+
+.carrusel__boton--siguiente{
+    right:25px;
+}
+
+/* =========================
+   SECCIONES GENERALES
+========================= */
+
+.catalogo,
+.resultados,
+.proximos,
+.tabla,
+.jugadores,
+.contacto{
+    padding:5rem 5%;
+}
+
+.catalogo__titulo{
+
+    text-align:center;
+
+    font-size:2.8rem;
+
+    font-weight:900;
+
+    margin-bottom:4rem;
+
+    color:white;
+}
+
+/* =========================
+   NOTICIAS
+========================= */
+
+#noticias{
+    background:var(--fondo-secundario);
+}
+
+.catalogo__grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:2rem;
+}
+.producto{
+
+    background:#243447;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:var(--sombra);
+
+    transition:.3s;
+}
+
+.producto:hover{
+
+    transform:translateY(-10px);
+}
+
+.producto img{
+
+    width:100%;
+
+    height:220px;
+
+    object-fit:cover;
+
+    transition:.5s;
+}
+
+.producto:hover img{
+
+    transform:scale(1.05);
+}
+
+.producto__nombre{
+
+    color:white;
+
+    font-size:1.2rem;
+
+    font-weight:800;
+
+    padding:1.5rem;
+}
+.producto__boton{
+
+    display:block;
+
+    width:calc(100% - 3rem);
+
+    margin:0 1.5rem 1.5rem;
+
+    padding:1rem;
+
+    border-radius:50px;
+
+    background:var(--color-marca);
+
+    color:white;
+
+    text-decoration:none;
+
+    text-align:center;
+
+    font-weight:700;
+
+    transition:.3s;
+}
+
+.producto__boton:hover{
+
+    background:var(--color-marca-dark);
+}
+
+/* =========================
+   RESULTADOS
+========================= */
+
+.resultados{
+    background:var(--fondo-principal);
+}
+
+.resultados__contenedor{
+
+    max-width:1000px;
+
+    margin:auto;
+}
+
+.partido{
+
+    background:#243447;
+
+    padding:1.4rem 2rem;
+
+    border-radius:20px;
+
+    margin-bottom:1rem;
+
+    display:grid;
+
+    grid-template-columns:1fr 120px 1fr;
+
+    align-items:center;
+
+    box-shadow:var(--sombra);
+}
+
+.partido span:first-child{
+    text-align:left;
+    color:white;
+}
+
+.partido strong{
+
+    text-align:center;
+
+    color:var(--color-marca);
+
+    font-size:1.4rem;
+}
+
+.partido span:last-child{
+    text-align:right;
+    color:white;
+}
+
+/* =========================
+   PROXIMOS PARTIDOS
+========================= */
+
+.proximos{
+    background:var(--fondo-secundario);
+}
+
+.proximos__grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:2rem;
+}
+
+.encuentro{
+
+    background:#243447;
+
+    padding:2rem;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:var(--sombra);
+
+    transition:var(--transicion);
+}
+
+.encuentro:hover{
+
+    transform:translateY(-8px);
+}
+
+.encuentro h3{
+
+    color:white;
+
+    margin-bottom:1rem;
+}
+
+.encuentro p{
+
+    color:var(--texto-secundario);
+}
+
+/* =========================
+   TABLA DE POSICIONES
+========================= */
+
+.tabla{
+    background:var(--fondo-principal);
+}
+
+.tabla table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    background:#243447;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:var(--sombra);
+}
+
+.tabla thead{
+
+    background:var(--color-marca);
+
+    color:white;
+}
+
+.tabla th,
+.tabla td{
+
+    padding:1rem;
+
+    text-align:center;
+}
+
+.tabla tbody tr{
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.tabla tbody tr:hover{
+
+    background:#2d435c;
+}
+
+.tabla td{
+    color:white;
+}
+
+/* =========================
+   JUGADORES
+========================= */
+
+.jugadores .producto{
+
+    position:relative;
+}
+
+.jugadores .producto img{
+
+    height:320px;
+}
+
+.jugadores .producto__nombre{
+
+    position:absolute;
+
+    left:0;
+    right:0;
+    bottom:0;
+
+    padding:1.5rem;
+
+    color:white;
+
+    background:linear-gradient(
+        transparent,
+        rgba(0,0,0,.9)
+    );
+
+    font-size:1.4rem;
+
+    font-weight:800;
+}
+
+/* =========================
+   LIGAS
+========================= */
+
+#ligas{
+    background:var(--fondo-principal);
+}
+
+#ligas .catalogo__grid{
+
+    display:flex;
+
+    gap:2rem;
+
+    overflow-x:auto;
+
+    padding-bottom:1rem;
+
+    scroll-behavior:smooth;
+}
+
+#ligas .catalogo__grid::-webkit-scrollbar{
+    height:8px;
+}
+
+#ligas .catalogo__grid::-webkit-scrollbar-thumb{
+
+    background:var(--color-marca);
+
+    border-radius:20px;
+}
+
+#ligas .producto{
+
+    flex:0 0 320px;
+}
+
+/* =========================
+   CONTACTO
+========================= */
+
+.contacto{
+    background:var(--fondo-secundario);
+}
+
+.formulario-contacto{
+
+    max-width:900px;
+
+    margin:auto;
+
+    background:#243447;
+
+    padding:3rem;
+
+    border-radius:25px;
+
+    box-shadow:var(--sombra);
+}
+
+.formulario-contacto__titulo{
+
+    text-align:center;
+
+    color:white;
+
+    margin-bottom:2rem;
+}
+
+.formulario-contacto__formulario{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:1.3rem;
+}
+
+.formulario-contacto__formulario input,
+.formulario-contacto__formulario textarea{
+
+    width:100%;
+
+    padding:1rem;
+
+    border:1px solid #334155;
+
+    border-radius:15px;
+
+    background:#0f172a;
+
+    color:white;
+
+    font-family:inherit;
+}
+
+.formulario-contacto__formulario input:focus,
+.formulario-contacto__formulario textarea:focus{
+
+    outline:none;
+
+    border-color:var(--color-marca);
+}
+
+.formulario-contacto__formulario button{
+
+    border:none;
+
+    padding:1rem;
+
+    border-radius:50px;
+
+    background:var(--color-marca);
+
+    color:white;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.formulario-contacto__formulario button:hover{
+
+    background:var(--color-marca-dark);
+}
+
+#mensajeFormulario{
+    display:none;
+    margin-top:20px;
+    padding:15px;
+    background:#16a34a;
+    color:white;
+    border-radius:10px;
+    text-align:center;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer{
+
+    background:#020617;
+
+    padding:3rem 5%;
+
+    text-align:center;
+}
+
+.footer h3{
+
+    color:var(--color-marca);
+
+    margin-bottom:1rem;
+}
+
+.footer p{
+
+    color:#cbd5e1;
+
+    margin-bottom:.5rem;
+}
+
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+    .encabezado{
+
+        flex-direction:column;
+
+        gap:1rem;
+    }
+
+    .nav_principal_lista{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+    }
+
+    .carrusel{
+
+        height:60vh;
+    }
+
+    .carrusel_texto h1{
+
+        font-size:2.3rem;
+    }
+
+    .carrusel_texto p{
+
+        font-size:1rem;
+    }
+
+    .partido{
+
+        grid-template-columns:1fr;
+
+        gap:.8rem;
+
+        text-align:center;
+    }
+
+    .partido span:first-child,
+    .partido span:last-child{
+
+        text-align:center;
+    }
+
+    #ligas .producto{
+
+        flex:0 0 85%;
+    }
+
+    .formulario-contacto{
+
+        padding:2rem;
+    }
+
+    .tabla{
+
+        overflow-x:auto;
+    }
+
+  }
